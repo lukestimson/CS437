@@ -4,12 +4,13 @@
   "description": "",
   "main": "public/index.html",
   "scripts": {
+    "start": "http-server public/",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "http-": "^0.2.0"
+    "http-": "^0.2.0",
+    "http-server": "^14.1.1"
   }
 }
-
