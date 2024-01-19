@@ -1,13 +1,59 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Travel Destination Finder</title>
+    <title>Travel Destinations</title>
+    <style>
+        .destination {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .info {
+            margin-right: 20px;
+        }
+
+        .image {
+            width: 150px;
+            height: 100px;
+            object-fit: cover;
+        }
+    </style>
 </head>
 <body>
-    <h1>Welcome to the Travel Destination Finder</h1>
-    <ul>
-        <li><a href="destinations/example-destination.html">Example Destination</a></li>
-        <!-- Add more destinations here -->
-    </ul>
+    <h1>Travel Destinations</h1>
+
+    <div class="destination">
+        <div class="info">
+            <h2><a href="destinations/faroe-islands.html">Faroe Islands</a></h2>
+            <p>Avg Cost of Living: [Info]</p>
+            <p>Type of Destination: [Info]</p>
+            <p>Peak and Low Season: [Info]</p>
+            <p>Activities: [Info]</p>
+        </div>
+        <img class="image" src="destinations/images/faroe-islands.jpg" alt="Faroe Islands">
+    </div>
+
+    <div class="destination">
+        <div class="info">
+            <h2><a href="destinations/costa-rica.html">Costa Rica</a></h2>
+            <p>Avg Cost of Living: [Info]</p>
+            <p>Type of Destination: [Info]</p>
+            <p>Peak and Low Season: [Info]</p>
+            <p>Activities: [Info]</p>
+        </div>
+        <img class="image" src="destinations/images/costa-rica.jpg" alt="Costa Rica">
+    </div>
+
+    <div class="destination">
+        <div class="info">
+            <h2><a href="destinations/madeira-portugal.html">Madeira, Portugal</a></h2>
+            <p>Avg Cost of Living: [Info]</p>
+            <p>Type of Destination: [Info]</p>
+            <p>Peak and Low Season: [Info]</p>
+            <p>Activities: [Info]</p>
+        </div>
+        <img class="image" src="destinations/images/madeira-portugal.jpg" alt="Madeira, Portugal">
+    </div>
 </body>
 </html>
