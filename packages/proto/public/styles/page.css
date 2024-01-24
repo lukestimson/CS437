@@ -4,7 +4,7 @@ body {
     color: #f0f0f0; /* Default font color - FFFFFF = off white: f0f0f0 */
 }
 
-/* Header styling
+/* Header styling */
 header {
     background-color: #2c2c2c; /* Slightly lighter gray for the header */
     color: #f0f0f0; /* Text color for the header - white for contrast */
@@ -42,10 +42,14 @@ h3 {
     display: flex;
     align-items: center;
     margin-bottom: 20px;
+    margin-left: 20px;
+
 }
 
 .info {
     margin-right: 20px;
+    margin-left: 40px; /* Greater indentation for content */
+
 }
 
 .image {
