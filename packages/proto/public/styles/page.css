@@ -1,3 +1,32 @@
+/* Set the background color of the entire page */
+body {
+    background-color: #333333; /* Dark gray */
+    color: #f0f0f0; /* Default font color - FFFFFF = white */
+}
+
+/* Header styling */
+header {
+    background-color: #2c2c2c; /* Slightly lighter gray for the header */
+    color: #FFD700; /* Text color for the header - white for contrast */
+}
+
+a {
+    color: #00bcd4; /* Dodger blue color for links */
+    text-decoration: none; /* Optional: removes underline from links */
+}
+
+a:hover {
+    text-decoration: underline; /* Optional: adds underline on hover for links */
+}
+
+/* Styling for headings (h1, h2, h3, etc.) */
+h1, h2, h3 {
+    color: #FFD700; /* Gold color for headings */
+}
+
+/* Continue styling other elements as needed, ensuring they contrast well with the dark background */
+
+/* Existing styles */
 .destination {
     display: flex;
     align-items: center;
