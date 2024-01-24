@@ -1,6 +1,6 @@
 /* Set the background color of the entire page */
 body {
-    background-color: #FFFFFF; /* Dark gray 333333*/
+    background-color: #333333; /* Dark gray 333333*/
     color: #f0f0f0; /* Default font color - FFFFFF = off white: f0f0f0 */
 }
 
