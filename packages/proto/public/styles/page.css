@@ -22,7 +22,7 @@ a:hover {
 /* Styling for header h1 (Travel Destinations) */
 h1{
     background-color: #2c2c2c; /* Slightly lighter gray for the header */
-    color: #FFD700;  /* Gold color for headings */
+    color: #f0f0f0;  /* Gold color for headings: FFD700 */
 }
 
 /* Styling for sub-header's h2 (Faroe Islands) */
