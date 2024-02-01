@@ -45,8 +45,24 @@ h3 {
     /*flex: 1; /* This will make the .info block fill the space and push the image to the end */
 }
 
+
+/* Additional .info styling to account for icon
+.info p {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;  Optional: adds space between icon and text */
+}
+
+
 .image {
     width: 150px;
     height: 100px;
     object-fit: cover;
+}
+
+.icon {
+    height: 1em; /* Adjust size to match text */
+    width: auto;
+    fill: white; /* Sets the color of the SVG */
+    vertical-align: middle; /* Aligns the icon with the text */
 }
