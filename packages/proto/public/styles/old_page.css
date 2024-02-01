@@ -1,0 +1,84 @@
+/* OLD CSS
+body {
+    background-color: #333333; /* Dark gray 333333*/
+    color: #f0f0f0; /* Default font color - FFFFFF = off white: f0f0f0 */
+    font-family: 'Kanit', sans-serif;
+}
+
+/* Link Text Styling */
+a {
+    color: #00bcd4; /* Dodger blue color for links */
+    text-decoration: none; /* Optional: removes underline from links */
+}
+a:hover {
+    text-decoration: underline; /* Optional: adds underline on hover for links */
+}
+
+/* For the Logo and Title to be on the same Line */
+.header {
+    display: flex;
+    justify-content: space-between; /* Aligns items on the main axis */
+    align-items: center; /* Centers items vertically in the container */
+    text-align: center;
+}
+
+/* Header Styling (Travel Destinations) */
+h1{
+    background-color: #2c2c2c; /* Slightly lighter gray for the header */
+    color: #FFD700;  /* Gold color for headings: FFD700 */
+    font-family: 'PT Serif', serif;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px; /* Adjust thickness of the header */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+
+/* Styling for sub-header's h2 (Faroe Islands) */
+h2{
+    color: #f0f0f0;  /*  */
+}
+
+/* Styling for sub-sub-header's h2 (not used yet) */
+h3 {
+    color: #f0f0f0;  /*  */
+}
+
+/* Existing styles */
+.destination {
+    display: flex;
+    margin-bottom: 10px;
+    margin-left: 30px;
+    align-items: left;
+}
+
+.info {
+    margin-left: 20px;
+    margin-right: 25px;
+    /*flex: 1; /* This will make the .info block fill the space and push the image to the end */
+}
+
+.image {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    margin-top: 35px;
+}
+
+.icon {
+    height: 2em; /* Adjust size to match text */
+    width: 3em;
+    fill: white; /* Sets the color of the SVG */
+    vertical-align: middle; /* Aligns the icon with the text */
+}
+
+.logo img {
+    width: 4em; /* Adjust based on desired logo width */
+    height: auto; /* Maintains aspect ratio */
+    /* Additional styling as needed */
+}
