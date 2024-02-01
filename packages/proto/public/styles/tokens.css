@@ -1,0 +1,11 @@
+/* tokens.css */
+:root {
+    --background-color: #333333;
+    --text-color: #f0f0f0;
+    --link-color: #00bcd4;
+    --link-hover-decoration: underline;
+    --header-bg-color: #2c2c2c;
+    --header-text-color: #FFD700;
+    --font-family-default: 'Kanit', sans-serif;
+    --font-family-heading: 'PT Serif', serif;
+}
