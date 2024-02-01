@@ -14,6 +14,14 @@ a:hover {
     text-decoration: underline; /* Optional: adds underline on hover for links */
 }
 
+/* For the Logo and Title to be on the same Line */
+.header {
+    display: flex;
+    justify-content: space-between; /* Aligns items on the main axis */
+    align-items: center; /* Centers items vertically in the container */
+    text-align: center;
+}
+
 /* Header Styling (Travel Destinations) */
 h1{
     background-color: #2c2c2c; /* Slightly lighter gray for the header */
@@ -24,7 +32,6 @@ h1{
     justify-content: space-between;
     align-items: center;
     padding: 20px; /* Adjust thickness of the header */
-    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -56,14 +63,6 @@ h3 {
     /*flex: 1; /* This will make the .info block fill the space and push the image to the end */
 }
 
-
-/* Additional .info styling to account for icon
-.info p {
-    display: flex;
-    align-items: center;
-    gap: 0.5em;  Optional: adds space between icon and text */
-
-
 .image {
     width: 300px;
     height: 200px;
@@ -76,4 +75,10 @@ h3 {
     width: 3em;
     fill: white; /* Sets the color of the SVG */
     vertical-align: middle; /* Aligns the icon with the text */
+}
+
+.logo img {
+    width: 4em; /* Adjust based on desired logo width */
+    height: auto; /* Maintains aspect ratio */
+    /* Additional styling as needed */
 }
