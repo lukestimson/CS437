@@ -97,4 +97,19 @@ h3 {
   padding: 8px;
 }
 
-/* More styles for hover effects, etc. */
+/* Styles for UserPanel component */
+.profile-text {
+  color: #333; /* Example: sets the text color */
+  font-size: 1rem; /* Example: sets the font size */
+  margin-top: 0.5rem; /* Example: adds some space above the text */
+  text-align: center; /* Centers the text */
+}
+
+/* You can also style the image to make it circular and fit the design */
+.user-panel img {
+  border-radius: 50%; /* Makes the image circular */
+  width: 60px; /* Sets a specific width */
+  height: 60px; /* Sets a specific height to maintain aspect ratio */
+  object-fit: cover; /* Ensures the image covers the area without distortion */
+  margin-bottom: 0.5rem; /* Adds some space below the image */
+}
