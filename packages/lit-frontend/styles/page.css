@@ -84,3 +84,17 @@ h3 {
     width: 4em; /* Adjust based on desired logo width */
     height: auto; /* Maintains aspect ratio */
 }
+/* New Styling for PE-3*/
+.user-panel {
+  display: none; /* Initially hidden */
+  /* Additional styling */
+}
+
+.user-panel a {
+  display: block;
+  color: var(--link-color); /* Using design tokens */
+  text-decoration: none;
+  padding: 8px;
+}
+
+/* More styles for hover effects, etc. */
