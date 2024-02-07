@@ -1,0 +1,86 @@
+/* Set the background color of the entire page */
+body {
+    background-color: var(--background-color); /* Dark gray */
+    color: var(--text-color); /* Default font color - off white */
+    font-family: var(--font-family-default);
+}
+
+/* Link Text Styling */
+a {
+    color: var(--link-color); /* Dodger blue color for links */
+    text-decoration: none; /* Optional: removes underline from links */
+}
+a:hover {
+    text-decoration: var(--link-hover-decoration); /* Optional: adds underline on hover for links */
+}
+
+/* For the Logo and Title to be on the same Line */
+.header {
+    display: flex;
+    justify-content: space-between; /* Aligns items on the main axis */
+    align-items: center; /* Centers items vertically in the container */
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Header Styling (Travel Destinations) */
+h1 {
+    font-size: 32px;
+    background-color: var(--header-bg-color); /* Slightly lighter gray for the header */
+    color: var(--header-text-color); /* Gold color for headings */
+    font-family: var(--font-family-heading);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px; /* Adjust thickness of the header */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* Styling for sub-header's h2 (Faroe Islands) */
+h2 {
+    font-size: 24px;
+    color: var(--text-color);
+    margin-bottom: 10px;
+
+}
+
+/* Styling for sub-sub-header's (not used yet) */
+h3 {
+    color: var(--text-color);
+}
+
+/* Existing styles */
+.destination {
+    display: flex;
+    margin-bottom: 20px;
+    margin-left: 30px;
+    align-items: left;
+}
+
+.info {
+    margin-left: 20px;
+    margin-right: 25px;
+}
+
+.image {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    margin-top: 10px;
+}
+
+.icon {
+    height: 2em; /* Adjust size to match text */
+    width: 3em;
+    fill: var(--text-color); /* Updates icon fill to use text color token */
+    vertical-align: middle; /* Aligns the icon with the text */
+}
+
+.logo img {
+    width: 4em; /* Adjust based on desired logo width */
+    height: auto; /* Maintains aspect ratio */
+}
