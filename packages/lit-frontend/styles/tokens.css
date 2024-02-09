@@ -8,4 +8,7 @@
     --header-text-color: #FFD700;
     --font-family-default: 'Kanit', sans-serif;
     --font-family-heading: 'PT Serif', serif;
+
+        /* For UserPanel (User Profile styling) */
+    --panel-background-color: #333333; /* or any default value */
 }
