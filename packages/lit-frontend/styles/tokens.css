@@ -1,14 +1,35 @@
 /* tokens.css */
 :root {
+    /* Dark theme colors */
     --background-color: #333333;
     --text-color: #f0f0f0;
     --link-color: #00bcd4;
-    --link-hover-decoration: underline;
     --header-bg-color: #2c2c2c;
     --header-text-color: #FFD700;
+
+    --link-hover-decoration: underline;
     --font-family-default: 'Kanit', sans-serif;
     --font-family-heading: 'PT Serif', serif;
 
-        /* For UserPanel (User Profile styling) */
+    /* For UserPanel (User Profile styling) */
     --panel-background-color: #333333; /* or any default value */
+    --hover-background-color: #00bcd4;
 }
+body.light-mode {
+    /* Light theme colors */
+    --background-color: #f0f0f0;
+    --text-color: #333333;
+    --link-color: #007bff;
+    --header-bg-color: #ffffff;
+    --header-text-color: #333333;
+
+    --link-hover-decoration: underline;
+    --font-family-default: 'Kanit', sans-serif;
+    --font-family-heading: 'PT Serif', serif;
+
+    /* For UserPanel (User Profile styling) */
+    --panel-background-color: #333333; /* or any default value */
+    --hover-background-color: #00bcd4;
+}
+
+

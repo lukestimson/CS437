@@ -16,6 +16,8 @@ a:hover {
 
 /* For the Logo and Title to be on the same Line */
 .header {
+    background-color: var(--header-bg-color); /* Slightly lighter gray for the header */
+
     display: flex;
     justify-content: space-between; /* Aligns items on the main axis */
     align-items: center; /* Centers items vertically in the container */

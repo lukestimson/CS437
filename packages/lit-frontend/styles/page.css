@@ -16,6 +16,7 @@ a:hover {
 
 /* For the Logo and Title to be on the same Line */
 .header {
+    background-color: var(--header-bg-color); /* Slightly lighter gray for the header */
     display: flex;
     justify-content: space-between; /* Aligns items on the main axis */
     align-items: center; /* Centers items vertically in the container */
@@ -26,7 +27,6 @@ a:hover {
 /* Header Styling (Travel Destinations) */
 h1 {
     font-size: 32px;
-    background-color: var(--header-bg-color); /* Slightly lighter gray for the header */
     color: var(--header-text-color); /* Gold color for headings */
     font-family: var(--font-family-heading);
 
@@ -84,32 +84,93 @@ h3 {
     width: 4em; /* Adjust based on desired logo width */
     height: auto; /* Maintains aspect ratio */
 }
+
+
 /* New Styling for PE-3*/
-.user-panel {
-  display: none; /* Initially hidden */
-  /* Additional styling */
+.profile-dropdown {
+    position: relative;
+    display: inline-block;
 }
 
-.user-panel a {
-  display: block;
-  color: var(--link-color); /* Using design tokens */
-  text-decoration: none;
-  padding: 8px;
+
+/* New Styling for Profile page */
+.profile-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--header-bg-color);
+    border-radius: 20px;
+    margin: 100px;
+    padding: 50px;
+    height: 120px;
 }
 
-/* Styles for UserPanel component */
-.profile-text {
-  color: #333; /* Example: sets the text color */
-  font-size: 1rem; /* Example: sets the font size */
-  margin-top: 0.5rem; /* Example: adds some space above the text */
-  text-align: center; /* Centers the text */
+.profile-image {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin-right: 20px;
 }
 
-/* You can also style the image to make it circular and fit the design */
-.user-panel img {
-  border-radius: 50%; /* Makes the image circular */
-  width: 60px; /* Sets a specific width */
-  height: 60px; /* Sets a specific height to maintain aspect ratio */
-  object-fit: cover; /* Ensures the image covers the area without distortion */
-  margin-bottom: 0.5rem; /* Adds some space below the image */
+.profile-info {
+    text-align: left;
 }
+
+.user-name {
+    margin: 0;
+    font-size: 32px;
+}
+
+.bio {
+    margin: 10px 0;
+    font-size: 20px;
+}
+
+/* Container for the profile sections: Enable Colum layout */
+.profile-sections {
+    display: flex;
+    justify-content: center; /* Center the sections horizontally */
+    flex-wrap: wrap; /* Allows sections to wrap in smaller viewports */
+    margin: 0 auto; /* Center the container */
+    gap: 100px; /* Space between sections */
+}
+
+/* Individual profile sections */
+.profile-section {
+    background-color: var(--header-bg-color);
+    border-radius: 20px;
+    padding: 20px; /* Adjust padding */
+    flex: 1; /* Allows sections to grow and fill available space */
+    min-width: 300px; /* Minimum width before wrapping */
+    max-width: calc(50% - 50px); /* Maximum width, accounting for gap */
+}
+
+.section-title {
+    text-align: center;
+    margin: 0 0 20px 0;
+}
+
+.back-button-container {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 100; /* Ensure it's above other content */
+}
+
+.back-button {
+    display: inline-block;
+    background-color: var(--header-bg-color); /* Use your header background color */
+    color: var(--text-color); /* Use your text color */
+    text-decoration: none; /* Removes underline from link */
+    padding: 10px 15px; /* Adjust padding as needed */
+    border-radius: 5px; /* Optional: rounds the corners */
+    font-size: 16px; /* Adjust font size as needed */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Optional: adds a shadow for depth */
+    transition: background-color 0.3s; /* Smooth background color transition on hover */
+}
+
+.back-button:hover {
+    background-color: #555; /* Darker background on hover */
+}
+
+
