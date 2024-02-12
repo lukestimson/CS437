@@ -11,6 +11,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kanit&family=PT+Serif:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
 
+    <script>var exports = {};</script>
+    <script type="module" src="/components/destination-card.ts"></script>
+    <script type="module" src="/components/drop-down.ts"></script>
+    <script type="module" src="/components/user-panel.ts"></script>
+
 
     <title>Travel Destinations</title>
 </head>
@@ -21,12 +26,16 @@
         <drop-down>
                 <div class="profile-icon"></div>
         </drop-down>
-        <script type="module" src="/main.ts"></script>
+        <!--<script type="module" src="/main.ts"></script>-->
     </header>
 
-    <destination-card>
-        <span slot="title">Faroe Islands</span>
-        <span slot="info">Avg Cost of Living: [info]</span>
+    <destination-card
+            title="Faroe Islands"
+            cost="Average Cost: $3000"
+            type="Type: Remote"
+            season="Peak Season: June-August"
+            activities="Activities: Hiking, Bird Watching"
+            imageUrl="/images/faroe-islands.jpg">
     </destination-card>
 
 

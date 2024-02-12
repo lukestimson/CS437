@@ -1,6 +1,6 @@
-import './components/user-panel';
 import './components/drop-down';
-import './components/destination-card.ts';
+import './components/user-panel';
+import './components/destination-card';
 
 
 //This setup tells the browser to load and define these custom elements,

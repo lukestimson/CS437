@@ -1,9 +1,9 @@
 import { LitElement, html, css } from 'lit';
-import { customElement } from 'lit/decorators.js';
-import { property } from 'lit/decorators.js';
+import { property, customElement } from 'lit/decorators.js';
+
 
 @customElement('destination-card')
-class DestinationCard extends LitElement {
+export class DestinationCard extends LitElement {
     static styles = css`
         :host {
             display: block;

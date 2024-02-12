@@ -1,8 +1,8 @@
 import { LitElement, html, css } from 'lit';
-import { customElement, state } from 'lit/decorators.js';
+import { customElement } from 'lit/decorators.js';
 
 @customElement('user-panel')
-class UserPanel extends LitElement {
+export class UserPanel extends LitElement {
   static styles = css`
     :host {
       display: block;
@@ -98,7 +98,7 @@ class UserPanel extends LitElement {
       </label>
     `;
   }
-  toggleDarkMode(e) {
+  toggleDarkMode(e: { target: { checked: any; }; }) {
     const checked = e.target.checked;
     document.body.classList.toggle('light-mode', checked);
   }
