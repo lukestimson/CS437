@@ -1,8 +1,8 @@
 {
   "compilerOptions": {
-    "target": "ES2020",
+    "target": "ESNext",
     "experimentalDecorators": true,   //This is crucial for using decorators, like @property from Lit
-    "useDefineForClassFields": false,  //changed to true - troubleshooting
+    "useDefineForClassFields": false,  //changed - troubleshooting
     "module": "ESNext",
     "lib": ["ES2020", "DOM", "DOM.Iterable"],
     "skipLibCheck": true,

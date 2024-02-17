@@ -26,39 +26,69 @@
         <drop-down>
                 <div class="profile-icon"></div>
         </drop-down>
-
     </header>
 
+    <!-- Search Filter -->
+    <h2>
+        <!-- Search Filter -->
+        <input type="text" id="searchBox" placeholder="Search destinations">
+        <!-- Sliding Bar Filter -->
+        <label for="costRange">Cost Range:</label>
+        <input type="range" id="costRange" min="0" max="5000" value="0">
+        <p>&nbsp;&nbsp;&nbsp;</p>
+    </h2>
     <destination-card
             title="Faroe Islands"
-            cost="Average Cost: $3000"
-            type="Type: Remote"
-            season="Peak Season: June-August"
-            activities="Activities: Hiking, Bird Watching"
+            cost="$3000"
+            type="Remote"
+            season="June-August"
+            activities="Hiking, Bird Watching"
             imageUrl="/images/faroe-islands.jpg">
     </destination-card>
 
+    <destination-card
+            title="Costa Rica"
+            cost="$1500"
+            type="Tropical"
+            season="March - September"
+            activities="Surfing, hiking, hot springs"
+            imageUrl="/images/costa-rica.jpg">
+    </destination-card>
 
-    <div class="destination">
-        <div class="info">
-            <h2><a href="destinations/faroe-islands.html">Costa Rica</a></h2>
-            <p><svg class="icon"><use href="/icons/destinationinfo.svg#icon3:money"></use></svg> Avg Cost of Living: [info]</p>
-            <p><svg class="icon"><use href="/icons/destinationinfo.svg#icon2:location"></use></svg> Type of Destination: [Info]</p>
-            <p><svg class="icon"><use href="/icons/destinationinfo.svg#icon4:time"></use></svg> Peak and Low Season: June-August</p>
-            <p><svg class="icon"><use href="/icons/destinationinfo.svg#icon1:activities"></use></svg> Activities: [Info]</p>
-        </div>
-        <img class="image" src="/images/costa-rica.jpg" alt="Costa Rica">
-    </div>
+    <destination-card
+            title="Madeira Island"
+            cost="$1600"
+            type="Remote, Dramatic"
+            season="May-July"
+            activities="hiking, off-roading"
+            imageUrl="/images/madeira-portugal.jpeg">
+    </destination-card>
 
-    <div class="destination">
-        <div class="info">
-            <h2><a href="destinations/faroe-islands.html">Madeira</a></h2>
-            <p><svg class="icon"><use href="/icons/destinationinfo.svg#icon3:money"></use></svg> Avg Cost of Living: [info]</p>
-            <p><svg class="icon"><use href="/icons/destinationinfo.svg#icon2:location"></use></svg> Type of Destination: [Info]</p>
-            <p><svg class="icon"><use href="/icons/destinationinfo.svg#icon4:time"></use></svg> Peak and Low Season: June-August</p>
-            <p><svg class="icon"><use href="/icons/destinationinfo.svg#icon1:activities"></use></svg> Activities: [Info]</p>
-        </div>
-        <img class="image" src="/images/madeira-portugal.jpeg" alt="Madeira, Portugal">
-    </div>
+<!-- Added for Price range filtering -->
+    <script>
+        const searchBox = document.getElementById('searchBox');
+        const costRange = document.getElementById('costRange');
+        const destinationCards = document.querySelectorAll('destination-card');
+
+        // Function to filter destinations based on search query and cost range
+        function filterDestinations() {
+            const searchTerm = searchBox.value.toLowerCase();
+            const minCost = parseInt(costRange.value, 10);
+
+            // Filter destination cards based on search query and cost range
+            destinationCards.forEach(card => {
+                const cardTitle = card.getAttribute('title').toLowerCase();
+                const cardCost = parseInt(card.getAttribute('cost').replace('$', ''), 10);
+                const cardVisible = cardTitle.includes(searchTerm) && cardCost >= minCost;
+                card.style.display = cardVisible ? 'block' : 'none';
+            });
+        }
+
+        // Event listeners for search box and cost range
+        searchBox.addEventListener('input', filterDestinations);
+        costRange.addEventListener('input', filterDestinations);
+    </script>
+
+
 </body>
 </html>
