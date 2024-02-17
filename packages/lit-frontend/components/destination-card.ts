@@ -79,8 +79,8 @@ export class DestinationCard extends LitElement {
                 <div class="info">
                     <h2>${this.title}</h2>
                     
-                    <p><svg class="icon"><use href="/icons/destinationinfo.svg#icon3:money"></use></svg>
-                        Avg Cost of Living: <span>${this.cost}</span></p>
+                    <p><svg class="icon"><use href="/icons/destinationinfo.svg#icon3:money"></use></svg> Cost of 1 week Visit:
+                      <span>${this.cost}</span></p>
                     <p><svg class="icon"><use href="/icons/destinationinfo.svg#icon2:location"></use></svg> Type of Destination:
                       <span>${this.type}</span></p>
                     <p><svg class="icon"><use href="/icons/destinationinfo.svg#icon4:time"></use></svg> Peak and Low Season:
