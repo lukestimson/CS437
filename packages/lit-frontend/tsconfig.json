@@ -2,17 +2,17 @@
   "compilerOptions": {
     "target": "ESNext",
     "experimentalDecorators": true,   //This is crucial for using decorators, like @property from Lit
-    "useDefineForClassFields": false,  //changed - troubleshooting
+    "useDefineForClassFields": false,  //changing this to true will remove all destination-cards of site
     "module": "ESNext",
     "lib": ["ES2020", "DOM", "DOM.Iterable"],
     "skipLibCheck": true,
 
     /* Bundler mode */
-    "moduleResolution": "bundler",
-    "allowImportingTsExtensions": true,
+    "moduleResolution": "node",   //Changed from bundler - 2/23
+    "allowImportingTsExtensions": false,    //changed from true (this setting can only be used when "isolatedModules": true)
     "resolveJsonModule": true,
-    "isolatedModules": true,
-    "noEmit": true,
+    //"isolatedModules": true,    removed on 2/23
+    "noEmit": false,    //changed from true - 2/23 (we want ts to emit javascript)
 
     /* Linting */
     "strict": true,

@@ -1,3 +1,7 @@
+/* Current Error: Uncaught Reference Error: Require is not defined in user-panel.js
+Resolved this with replacing require() in .js with import statements, but Now there is another undefined thing "decorators_js_1" -gpt says this is because the imports aren't working? */
+
+
 import { LitElement, html, css } from 'lit';
 import { customElement } from 'lit/decorators.js';
 

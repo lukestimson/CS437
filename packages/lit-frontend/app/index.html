@@ -31,11 +31,13 @@
     <!-- Search Filter -->
     <h2>
         <!-- Search Filter -->
-        <input type="text" id="searchBox" placeholder="Search destinations">
+        <span>&nbsp;&nbsp;&nbsp;</span> <input type="text" id="searchBox" placeholder="Filter destinations">
         <!-- Sliding Bar Filter -->
         <label for="costRange">Travel Budget:</label>
-        <input type="range" id="costRange" min="0" max="5000" value="0">
-        <p>&nbsp;&nbsp;&nbsp;</p>
+        <input type="range" id="costRange" min="0" max="5000" value="5000">
+        <p id="costValue">$5000</p>
+        <p>&nbsp;</p>
+
     </h2>
     <destination-card
             title="Faroe Islands"
@@ -55,6 +57,7 @@
             imageUrl="/images/costa-rica.jpg">
     </destination-card>
 
+
     <destination-card
             title="Madeira, Portugal"
             cost="$1800"
@@ -73,7 +76,7 @@
             imageUrl="/images/andreas.jpg">
     </destination-card>
 
-<!-- Added for Price range filtering -->
+<!-- Added javascript for Price range filtering -->
     <script>
         const searchBox = document.getElementById('searchBox');
         const costRange = document.getElementById('costRange');
@@ -88,7 +91,7 @@
             destinationCards.forEach(card => {
                 const cardTitle = card.getAttribute('title').toLowerCase();
                 const cardCost = parseInt(card.getAttribute('cost').replace('$', ''), 10);
-                const cardVisible = cardTitle.includes(searchTerm) && cardCost >= minCost;
+                const cardVisible = cardTitle.includes(searchTerm) && cardCost <= minCost;
                 card.style.display = cardVisible ? 'block' : 'none';
             });
         }
@@ -96,6 +99,32 @@
         // Event listeners for search box and cost range     //
         searchBox.addEventListener('input', filterDestinations);
         costRange.addEventListener('input', filterDestinations);
+
+        const costValue = document.getElementById('costValue');
+
+        // Function to update the cost value display
+        function updateCostValue() {
+            const currentValue = costRange.value;
+            costValue.textContent = `$${currentValue}`; // Update the text content with the current value
+}
+
+        // Function to update the position of the costValue element based on the slider position
+        function updateCostValuePosition() {
+            const sliderWidth = costRange.offsetWidth;       // Get the width of the slider
+
+            const sliderValue = parseFloat(costRange.value);  // Get the value of the slider
+            
+            const position = (sliderValue / 5000) * sliderWidth;   // Calculate the position of the cost value relative to the slider position
+
+            costValue.style.left = `${position}px`;      // Set the left position of the costValue element
+        }
+
+        // Update the cost value display/ position when the slider value changes
+        costRange.addEventListener('input', updateCostValue);
+        costRange.addEventListener('input', updateCostValuePosition);
+
+        updateCostValuePosition();  // Call the function initially to set the initial position
+
     </script>
 
 

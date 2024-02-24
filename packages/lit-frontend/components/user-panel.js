@@ -1,3 +1,6 @@
+import { css, html, LitElement } from 'lit';
+import { customElement } from 'lit/decorators.js';
+
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
@@ -57,8 +60,10 @@ var __setFunctionName = (this && this.__setFunctionName) || function (f, name, p
     return Object.defineProperty(f, "name", { configurable: true, value: prefix ? "".concat(prefix, " ", name) : name });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var lit_1 = require("lit");
-var decorators_js_1 = require("lit/decorators.js");
+
+// var lit_1 = require("lit");
+// var decorators_js_1 = require("lit/decorators.js");
+
 var UserPanel = function () {
     var _classDecorators = [(0, decorators_js_1.customElement)('user-panel')];
     var _classDescriptor;

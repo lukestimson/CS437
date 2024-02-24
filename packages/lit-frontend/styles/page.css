@@ -173,4 +173,15 @@ h3 {
     background-color: #555; /* Darker background on hover */
 }
 
+.spacer {
+    margin-left: 20px; /* Adjust the value as needed */
+}
 
+#costValue {        /* To display the CostRange value in the filter */
+    /* text-align: center; /* Center the text */
+    position: absolute; 
+    font-size: 16px; /* Adjust font size as needed */
+    /* margin-top: 5px; /* Add some space between the slider and the value */
+    transform: translateX(calc(-50% + 330px)); /* Adjust the offset (20px in this example) */
+
+}
