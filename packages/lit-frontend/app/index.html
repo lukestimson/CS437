@@ -12,6 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Kanit&family=PT+Serif:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
 
     <script>var exports = {};</script>
+
     <script type="module" src="/components/destination-card.ts"></script>
     <script type="module" src="/components/drop-down.ts"></script>
     <script type="module" src="/components/user-panel.ts"></script>
@@ -23,9 +24,13 @@
     <header class="header">
         <div class=logo> <img src="/logo.png" alt="Logo"></div>
         <h1 class="title">Travel Destinations</h1>
-        <drop-down>
-                <div class="profile-icon"></div>
+
+        <drop-down align="right">
+            <user-panel>
+
+            </user-panel>
         </drop-down>
+
     </header>
 
     <!-- Search Filter -->
@@ -53,10 +58,18 @@
             cost="$1200"
             type="Tropical"
             season="March - September"
-            activities="Surfing, hiking, hot springs"
+            activities="hiking, hot springs"
             imageUrl="/images/costa-rica.jpg">
     </destination-card>
 
+    <destination-card
+            title="Playa Hermosa, Costa Rica"
+            cost="$1100"
+            type="Tropical, Coastal"
+            season="March - September"
+            activities="Surfing, relaxing"
+            imageUrl="/images/Playahermosa-costaRica.jpg">
+    </destination-card>
 
     <destination-card
             title="Madeira, Portugal"
@@ -68,12 +81,30 @@
     </destination-card>
 
     <destination-card
+            title="Lisbon, Portugal"
+            cost="$1200"
+            type="City, Historic, San Francisco-like"
+            season="May-July"
+            activities="Riding Trams, Eating"
+            imageUrl="/images/lisbon-portugal.jpg">
+    </destination-card>
+
+    <destination-card
             title="Grindelwald, Switzerland"
             cost="$3000"
             type="Mountainous, historic"
             season="July, February"
             activities="train rides, cold-plunging"
-            imageUrl="/images/andreas.jpg">
+            imageUrl="/images/Grindelwald.jpg">
+    </destination-card>
+
+    <destination-card
+            title="Big Sur, California"
+            cost="$100"
+            type="coastal cliffs, historic beauty"
+            season="March, October"
+            activities="Drive Highway 1, tent camp"
+            imageUrl="/images/big-sur-california.jpg">
     </destination-card>
 
 <!-- Added javascript for Price range filtering -->
