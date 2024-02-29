@@ -16,23 +16,30 @@ export class DropDownElement extends LitElement {
                 : "--position-left: auto; --position-right: 0;";
 
         return html`
-      <input
-        type="checkbox"
-        id="is-shown"
-        @change=${this._handleChange}
-        .checked=${this.open} />
-      <label for="is-shown">
-        <slot>Menu</slot>
-      </label>
-      <slot name="menu" style=${menuStyle}>
-        <div>
-            <a href="/app/profile">Profile</a>
-            <a href="http://www.stimsonphoto.com" target="_blank">stimsonphoto.com</a>
+        <!-- Input (invisible) checkbox to toggle visibility of the menu -->
+        <input
+            type="checkbox"
+            id="is-shown"
+            @change=${this._handleChange}
+            .checked=${this.open} />
+        
+        <!-- Label associated with the input checkbox -->
+        <label for="is-shown">
+          <!-- Slot content, default text is "Menu" -->
+          <slot>Menu</slot>
+        </label>
+
+        <!-- Slot for menu content -->
+        <slot name="menu" style=${menuStyle}>
+            <!-- Menu content -->
+            <div>
+                <a href="/app/profile">Profile</a>
+                <a href="http://www.stimsonphoto.com" target="_blank">stimsonphoto.com</a>
             
-            <label class="toggle-switch">
-                <input type="checkbox" @change="${this.toggleDarkMode}">
-                <span class="slider round"></span>
-            </label>
+                <label class="toggle-switch">
+                    <input type="checkbox" @change="${this.toggleDarkMode}">
+                    <span class="slider round"></span>
+                </label>
         </div>
       </slot>
     `;
@@ -58,36 +65,35 @@ export class DropDownElement extends LitElement {
 
     label {
       cursor: pointer;
+      float: right;
+      margin-right: 10px;
     }
 
     slot[name="menu"] {
       display: none;
       position: absolute;
       top: 100%;
-      //left: var(--position-left);
-      //right: var(--position-right);
+      left: auto;
+      right: auto;
     }
 
     #is-shown:checked ~ slot[name="menu"] {
       display: block;
     }
-
-    /* CSS for slotted elements and default slot content */
-
-    ::slotted(ul[slot="menu"]),
-    slot[name="menu"] > ul {
-      margin: 0;
-      padding: 0.25em;
-      list-style: none;
-      white-space: nowrap;
+        
+    ::slotted([slot="menu"]) {
+        margin: 0;
+        padding: 0.25em;
+        list-style: none;
+        white-space: nowrap;
     }
 
-        /* Styles from User-panel_old */ 
+        /* Styles from old user-panel*/ 
     
     :host {
         display: block;
         padding: 10px;
-        background: var(--panel-background-color, black);
+        background: var(--header-bg-color);
         box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         min-width: 200px; /* Ensure it's not too narrow */
     }
@@ -99,10 +105,9 @@ export class DropDownElement extends LitElement {
         text-align: center; /* Center align links */
     }
     a:hover {
-        background-color: var(--hover-background-color, #f0f0f0); /* Optional: change on hover */
+        background-color: var(--hover-background-color, #f0f0f0); /* change on hover */
     }
-
-
+        
     .toggle-switch {
         position: relative;
         display: inline-block;
