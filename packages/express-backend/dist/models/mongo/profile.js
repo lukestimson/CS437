@@ -26,7 +26,8 @@ const profileSchema = new import_mongoose.Schema(
   {
     userid: { type: String, required: true, trim: true },
     name: { type: String, required: true, trim: true },
-    favoriteDestination: { type: String, trim: true }
+    favoriteDestination: { type: import_mongoose.Schema.Types.Mixed }
+    // Change the type to Mixed
   },
   { collection: "user_profiles" }
 );
