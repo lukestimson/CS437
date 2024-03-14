@@ -33,7 +33,7 @@ export class DropDownElement extends LitElement {
         <slot name="menu" style=${menuStyle}>
             <!-- Menu content -->
             <div>
-                <a href="/app/profile">Profile</a>
+                <a href="/app/profile/">Profile</a>
                 <a href="http://www.stimsonphoto.com" target="_blank">stimsonphoto.com</a>
             
                 <label class="toggle-switch">

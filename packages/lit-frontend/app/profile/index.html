@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="/styles/reset.css"/>
+    <link rel="stylesheet" href="/styles/tokens.css"/>
+    <link rel="stylesheet" href="/styles/page.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kanit&display=swap">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit&family=PT+Serif:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+
+    <script>var exports = {};</script>
+
+    <script type="module" src="/components/destination-card.ts"></script>
+    <script type="module" src="/components/drop-down.ts"></script>
+    <script type="module" src="/components/user-panel.ts"></script>
+
+    <script type="module" src="/src/user-profile.ts"></script>
+
+
+
+    <title>Travel Destinations</title>
+</head>
+<body>
+
+<header class="header">
+    <div class=logo> <img src="/logo.png" alt="Logo"></div>
+    <h1 class="title">Travel Destinations</h1>
+
+    <drop-down align="right">
+        <user-panel>
+
+        </user-panel>
+    </drop-down>
+</header>
+
+    <user-profile path="/profiles/blazeTwo"> </user-profile>
+    <user-profile-edit path="/profiles/blazeTwo"> </user-profile-edit>
+
+
+</body>
+</html>

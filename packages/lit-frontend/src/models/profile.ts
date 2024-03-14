@@ -2,5 +2,9 @@
 export interface Profile {
     userid: string;
     name: string;
-    favoriteDestination?: string;
+    bio?: string;
+    favoriteDestination?: {
+        name: string;
+        imageUrl: string;
+    };
 }
