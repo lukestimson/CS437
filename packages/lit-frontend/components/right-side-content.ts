@@ -27,7 +27,7 @@ export class RightSideContent extends LitElement {
             width: 300px;
             height: 200px;
             object-fit: cover;
-            margin-top: 20px;
+            margin-top: 45px;
             border-radius: 10px;
         }
 
