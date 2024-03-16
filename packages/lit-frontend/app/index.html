@@ -14,6 +14,7 @@
     <script>var exports = {};</script>
 
     <script type="module" src="/components/destination-card.ts"></script>
+    <script type="module" src="/components/right-side-content.ts"></script>
     <script type="module" src="/components/drop-down.ts"></script>
     <script type="module" src="/components/user-panel.ts"></script>
 
@@ -44,70 +45,81 @@
         <p>&nbsp;</p>
 
     </h2>
-    <destination-card
-            title="Faroe Islands"
-            cost="$2400"
-            type="Remote"
-            season="June-August"
-            activities="Hiking, Bird Watching"
-            imageUrl="/images/faroe-islands.jpg">
-    </destination-card>
+    <div class="main-container">
+        <div class="destination-cards">
+            <!-- Destination cards here -->
+            <destination-card
+                    title="Faroe Islands"
+                    cost="$2400"
+                    type="Remote"
+                    season="June-August"
+                    activities="Hiking, Bird Watching"
+                    imageUrl="/images/faroe-islands.jpg">
+            </destination-card>
 
-    <destination-card
-            title="Arenal, Costa Rica"
-            cost="$1200"
-            type="Tropical"
-            season="March - September"
-            activities="hiking, hot springs"
-            imageUrl="/images/costa-rica.jpg">
-    </destination-card>
+            <destination-card
+                    title="Arenal, Costa Rica"
+                    cost="$1200"
+                    type="Tropical"
+                    season="March - September"
+                    activities="hiking, hot springs"
+                    imageUrl="/images/costa-rica.jpg">
+            </destination-card>
 
-    <destination-card
-            title="Playa Hermosa, Costa Rica"
-            cost="$1100"
-            type="Tropical, Coastal"
-            season="March - September"
-            activities="Surfing, relaxing"
-            imageUrl="/images/Playahermosa-costaRica.jpg">
-    </destination-card>
+            <destination-card
+                    title="Playa Hermosa, Costa Rica"
+                    cost="$1100"
+                    type="Tropical, Coastal"
+                    season="March - September"
+                    activities="Surfing, relaxing"
+                    imageUrl="/images/Playahermosa-costaRica.jpg">
+            </destination-card>
 
-    <destination-card
-            title="Madeira, Portugal"
-            cost="$1800"
-            type="Remote, Dramatic"
-            season="May-July"
-            activities="hiking, off-roading"
-            imageUrl="/images/madeira-portugal.jpeg">
-    </destination-card>
+            <destination-card
+                    title="Madeira, Portugal"
+                    cost="$1800"
+                    type="Remote, Dramatic"
+                    season="May-July"
+                    activities="hiking, off-roading"
+                    imageUrl="/images/madeira-portugal.jpeg">
+            </destination-card>
 
-    <destination-card
-            title="Lisbon, Portugal"
-            cost="$1200"
-            type="City, Historic, San Francisco-like"
-            season="May-July"
-            activities="Riding Trams, Eating"
-            imageUrl="/images/lisbon-portugal.jpg">
-    </destination-card>
+            <destination-card
+                    title="Lisbon, Portugal"
+                    cost="$1200"
+                    type="City, Historic, San Francisco-like"
+                    season="May-July"
+                    activities="Riding Trams, Eating"
+                    imageUrl="/images/lisbon-portugal.jpg">
+            </destination-card>
 
-    <destination-card
-            title="Grindelwald, Switzerland"
-            cost="$3000"
-            type="Mountainous, historic"
-            season="July, February"
-            activities="train rides, cold-plunging"
-            imageUrl="/images/Grindelwald.jpg">
-    </destination-card>
+            <destination-card
+                    title="Grindelwald, Switzerland"
+                    cost="$3000"
+                    type="Mountainous, historic"
+                    season="July, February"
+                    activities="train rides, cold-plunging"
+                    imageUrl="/images/Grindelwald.jpg">
+            </destination-card>
 
-    <destination-card
-            title="Big Sur, California"
-            cost="$100"
-            type="coastal cliffs, historic beauty"
-            season="March, October"
-            activities="Drive Highway 1, tent camp"
-            imageUrl="/images/big-sur-california.jpg">
-    </destination-card>
+            <destination-card
+                    title="Big Sur, California"
+                    cost="$100"
+                    type="coastal cliffs, historic beauty"
+                    season="March, October"
+                    activities="Drive Highway 1, tent camp"
+                    imageUrl="/images/big-sur-california.jpg">
+            </destination-card>
+        </div>
 
-<!-- Added javascript for Price range filtering -->
+        <div class="right-side-content">
+            <!-- Right side content here -->
+            <right-side-content></right-side-content>
+        </div>
+    </div>
+
+
+    <!-- Added javascript for Price range filtering -->
     <script>
         const searchBox = document.getElementById('searchBox');
         const costRange = document.getElementById('costRange');

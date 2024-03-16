@@ -152,10 +152,11 @@ h3 {
 
 .back-button-container {
     position: absolute;
-    top: 20px;
+    top: 120px;
     left: 20px;
     z-index: 100; /* Ensure it's above other content */
 }
+
 
 .back-button {
     display: inline-block;
@@ -183,5 +184,41 @@ h3 {
     font-size: 16px; /* Adjust font size as needed */
     /* margin-top: 5px; /* Add some space between the slider and the value */
     transform: translateX(calc(-50% + 330px)); /* Adjust the offset (20px in this example) */
+}
 
+/* Column functionality of Destination cards & right side content */
+/* Add these styles to your existing stylesheet */
+
+/* Main container */
+.main-container {
+    display: flex;
+}
+
+/* Destination cards container */
+.destination-cards {
+    flex: 1; /* Take up remaining space */
+    margin-right: 20px; /* Add margin to create space between destination cards and right side content */
+    display: flex; /* Maintain flex display for nested items */
+    flex-wrap: wrap; /* Allow destination cards to wrap if necessary */
+}
+
+
+/* Right side content container */
+.right-side-content {
+    flex: 1; /* Take up remaining space */
+}
+
+/* Image Gallery */
+.image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px; /* Add padding for spacing */
+}
+
+/* Individual Image */
+.image-gallery img {
+    width: calc(20% - 10px); /* Set width for each image (20% - margin) */
+    margin-bottom: 20px; /* Add margin bottom for spacing */
+    border-radius: 10px; /* Add border radius for rounded corners */
 }

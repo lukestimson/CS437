@@ -14,7 +14,11 @@ export class DestinationCard extends LitElement {
             transition: transform 0.3s ease;
             background-color: var(--header-bg-color);
             color: var(--text-color);
+            width: calc(100% - 20px); /* Set width to half of the page width minus any margins */
+
         }
+        
+        
         :host(:hover) {
             transform: translateY(-5px);
         }
@@ -51,6 +55,18 @@ export class DestinationCard extends LitElement {
             margin-bottom: 10px;
             margin-left: 20px;
             align-items: left;
+        }
+
+        //New style (reference)
+        .destination-card {
+            width: calc(50% - 20px); /* Set width to half of the page width minus any margins */
+            float: left; /* Float the container to the left */
+            margin-right: 20px; /* Add margin between cards */
+            border-radius: 20px; /* Border radius */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Box shadow */
+            background-color: var(--header-bg-color); /* Background color */
+            color: var(--text-color); /* Text color */
+            overflow: hidden; /* Hide overflow content */
         }
 
         .info {

@@ -4,12 +4,12 @@ import { connect } from "./mongoConnect";
 import profiles from "./profiles";
 import { Profile } from "./models/profile";
 
-
 const app = express();
 const port = process.env.PORT || 3000;
 
 app.use(cors());
 app.use(express.json());
+
 
 // and add this after all the app.use() statements
 connect("LukesCLuster"); // db name here
